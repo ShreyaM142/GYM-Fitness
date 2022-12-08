@@ -1,0 +1,49 @@
+{% extends 'gymadmin/base.html'%}
+
+{%  block content %}
+<div class="row">
+    <div class=" col md-12">
+      <div class=" jumbotron p-3">
+<div><h2>Registration</h2> </div>
+
+<div>
+    <table class="table table-light">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">S.N.</th>
+            <th scope="col">Name</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Age</th>
+            <th scope="col">GYM type</th>
+            <th scope="col">Shift</th>
+            <th scope="col">Trainer</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {#% for now in datas %#}
+          <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{datas.user.userinformation.name}}</td>
+            <td>{{datas.user.userinformation.phone_number}}</td>
+            <td>{{datas.user.userinformation.email}}</td>
+            <th>{{datas.user.userinformation.address}}</th>
+            <td>{{datas.user.userinformation.gender}}</td>
+            <td>{{datas.user.userinformation.age}}</td>
+            <td>{{datas.schedule.type}}</td>
+            <td>{{datas.schedule.shift}}</td>
+            <td>{{datas.schedule.trainer}}</td>
+            <td>
+              <a href="/GYM/delete/{{ now.id }}" class="btn btn-danger btn-xs"
+                onclick="return confirm('Are You Sure For Delete?')">Delete</a>
+            </td>
+          </tr>
+          {#% endfor %#}
+        </tbody>
+      </table>
+</div>
+      </div></div></div>
+{% endblock %}
