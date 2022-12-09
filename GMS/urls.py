@@ -25,6 +25,6 @@ urlpatterns = [
 urlpatterns=urlpatterns+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
-admin.site.site_header = 'GYMfits'                    # default: "Django Administration"
-admin.site.index_title = 'Features area'                 # default: "Site administration"
-admin.site.site_title = 'HTML title from adminsitration' # default: "Django site admin"
+admin.site.site_header = 'GYM-Fitness'
+admin.site.index_title = 'Features area'
+admin.site.site_title = 'Administration'

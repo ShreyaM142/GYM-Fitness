@@ -54,7 +54,7 @@
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                          <span aria-hidden="true">&times;</span>
               </button>
-             Congratulations, your Account was created!
+             Congratulations, your account has been created!
         
          </div>
          
@@ -62,7 +62,7 @@
      
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6">
-                <h4>Sign Up</h4>
+                <h4>SignUp</h4>
                 <hr>
                 {% if messages %}
                     {% for message in messages %}
@@ -79,7 +79,7 @@
                         {{ profile_form.as_table }}
 
                         <tr>
-                            <td><button type="submit" class="btn btn-primary">Submit</button></td>
+                            <td><button type="submit" class="btn btn-primary">SignUp</button></td>
                         </tr>
                     </table>
      
@@ -87,10 +87,10 @@
             </div>
      
             <div class="col-lg-6 col-md-6 col-sm-6">
-                <h4>Related Links</h4>
+                <h4>Already a user</h4>
                 <p>
                     <a href="/reset-password/">Forgot Password?</a> <br>
-                    <a href="{% url 'login' %}">Login.</a> <br>
+                    <a href="{% url 'login' %}">Login</a> <br>
                 </p>
             </div>
      
